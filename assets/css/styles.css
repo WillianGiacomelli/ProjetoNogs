@@ -216,22 +216,21 @@ header {
 }
 
 .main-ilustrations {
-  position: relative;
   display: block;
   max-width: 80%;
   margin-top: 50px;
 }
 
 .main-image-1 {
-  position: absolute;
-  right: -30px;
+  position: relative;
+  bottom: -150px;
+  left: 150px;
   z-index: 1;
 }
 
 .main-image-2 {
-  position: absolute;
-  top: -120px;
-  left: -500px;
+  position: relative;
+  top: -400px;
 }
 
 .section-title {
@@ -328,6 +327,8 @@ header {
   border-top-left-radius: 50px;
   border-bottom-left-radius: 50px;
   position: relative;
+  width: 90vw;
+  float: right;
 }
 
 .computers-item-texts-gaming {
