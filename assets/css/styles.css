@@ -250,6 +250,7 @@ header {
 .why-item-group {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
 }
@@ -360,23 +361,50 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 50px;
+  gap: 25px;
+  box-sizing: border-box;
 }
 
 .consultancy-item {
   display: flex;
   flex-direction: column;
-  gap: 25px;
   align-items: center;
   background-color: var(--tertiary-color-c5);
   border-radius: 50px;
-  padding: 25px;
+  max-width: 400px;
+  padding: 40px 60px;
+  flex-grow: 1;
 }
 
 .consultancy-item-title {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: bold;
-  line-height: 2rem;
+  line-height: 2.4rem;
+  margin-bottom: 50px;
   text-transform: uppercase;
   color: var(--white-color);
+}
+
+.consultancy-item-description {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: regular;
+  color: var(--white-color);
+  text-align: center;
+  padding: 0 30px;
+}
+
+.botao-type-3 {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255 1) 16%,
+    rgba(71, 76, 255, 1) 100%
+  );
+  padding: 20px 50px;
+  color: var(--white-color);
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 1.5rem;
+  cursor: pointer;
+  text-transform: uppercase;
 }
