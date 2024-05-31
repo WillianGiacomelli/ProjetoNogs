@@ -158,6 +158,10 @@ header {
   color: var(--white-color);
 }
 
+.text-color-tertiary-c5 {
+  color: var(--tertiary-color-c5);
+}
+
 /* containers */
 .container-lg {
   max-width: 90%;
@@ -761,4 +765,123 @@ select {
   text-align: center;
   padding: 20px 0;
   margin-bottom: 0;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-group-search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+}
+
+.form-group-search input {
+  padding: 16px 16px 16px 30px;
+  border-radius: 10px;
+  border: none;
+  color: var(--tertiary-color-c1);
+  width: 100%;
+  background-color: var(--tertiary-color-c2);
+}
+
+.form-group-search input:focus {
+  border: 1px solid var(--tertiary-color-c6);
+}
+
+.form-group-search input::placeholder {
+  padding-left: 25px;
+  margin-left: 25px;
+  color: var(--tertiary-color-c1);
+}
+
+.form-group-search input::content {
+  padding-left: 20px;
+}
+
+.form-group-search img {
+  position: absolute;
+  left: 20px;
+}
+
+.accordion input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+.accordion-wrapper {
+  border-radius: 8px;
+  overflow: hidden;
+  width: 100%;
+  margin: 50px auto;
+}
+
+.accordion {
+  width: 100%;
+  color: white;
+  overflow: hidden;
+  margin-bottom: 16px;
+  border-radius: 8px;
+}
+
+.accordion:last-child {
+  margin-bottom: 0;
+}
+
+.accordion-label {
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  padding: 16px;
+  background: var(--tertiary-color-c2);
+  font-weight: bold;
+  cursor: pointer;
+  color: var(--tertiary-color-c1);
+  font-size: 20px;
+}
+
+.accordion-label:hover {
+  background: var(--tertiary-color-c5);
+}
+
+.accordion-label::after {
+  content: "\276F";
+  width: 16px;
+  height: 16px;
+  text-align: center;
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+}
+
+.accordion-content {
+  max-height: 0;
+  padding: 0 16px;
+  color: var(--tertiary-color-c1);
+  background: white;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.accordion-content p {
+  margin: 0;
+  color: var(--tertiary-color-c1);
+  font-size: 18px;
+}
+
+input:checked + .accordion-label {
+  background: var(--tertiary-color-c2);
+}
+
+input:checked + .accordion-label::after {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+input:checked ~ .accordion-content {
+  max-height: 100vh;
+  padding: 16px;
 }
