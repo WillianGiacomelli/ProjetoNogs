@@ -17,6 +17,7 @@
   margin: 0;
   padding: 0;
   font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
 }
 
 body {
@@ -649,7 +650,6 @@ select {
   padding: 10px;
   border-radius: 10px;
   border: none;
-  width: 100%;
   color: var(--tertiary-color-c1);
 }
 
@@ -738,6 +738,7 @@ select {
   color: var(--white-color);
   line-height: 2rem;
   text-align: center;
+  margin-bottom: 15px;
 }
 
 .footer-list ul {
