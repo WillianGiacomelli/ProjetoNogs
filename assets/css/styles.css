@@ -890,3 +890,11 @@ input:checked ~ .accordion-content {
   max-height: 100vh;
   padding: 16px;
 }
+
+.no-result-text {
+  color: var(--tertiary-color-c1);
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 50px;
+}

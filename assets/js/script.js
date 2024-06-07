@@ -22,7 +22,7 @@ fecharMobile.addEventListener("click", toggleMenu);
 let inputSearchElement = document.querySelector("#search-input");
 let questionsElements = document.querySelectorAll(".question");
 let questions = [];
-let alreadyHaveMessage;
+let alreadyHaveNoMatchesFromSearchMessage;
 
 questionsElements.forEach((question, index) => {
   questions.push({
@@ -38,13 +38,17 @@ inputSearchElement.addEventListener("input", (e) => {
   questions.forEach((question) => {
     const questionElement = questionsElements[question.id];
     if (question.question.toLowerCase().includes(searchValue)) {
-      questionElement.style.opacity = "0";
+      if (alreadyHaveNoMatchesFromSearchMessage) {
+        document.querySelector(".no-result").style.display = "none";
+      }
+
+      questionElement.style.opacity = "1";
       questionElement.style.transition = "opacity 0.5s";
-      setTimeout(() => {
-        questionElement.style.display = "none";
-      }, 1000);
+      questionElement.style.display = "block";
       hasMatchingQuestions = true;
     } else {
+      questionElement.style.opacity = "0";
+      questionElement.style.transition = "opacity 0.5s";
       questionElement.style.display = "none";
     }
   });
@@ -53,15 +57,16 @@ inputSearchElement.addEventListener("input", (e) => {
     const noResultsMessage = document.createElement("h1");
     noResultsMessage.textContent =
       "Não foram encontrados resultados para a sua busca.";
-    noResultsMessage.classList.add("section-title");
+    noResultsMessage.classList.add("no-result-text");
 
-    if (!alreadyHaveMessage) {
+    if (!alreadyHaveNoMatchesFromSearchMessage) {
       document.querySelector(".no-result").appendChild(noResultsMessage);
     }
 
-    alreadyHaveMessage = true;
-  } else if (searchValue.length == 0 && alreadyHaveMessage) {
+    alreadyHaveNoMatchesFromSearchMessage = true;
+  } else {
     const existingMessage = document.querySelector(".no-results-message");
+
     if (existingMessage) {
       noResultsMessage.remove();
     }
