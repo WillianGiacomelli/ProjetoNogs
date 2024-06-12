@@ -177,11 +177,11 @@ header {
 
 @media (max-width: 1200px) {
   .container-lg {
-    padding: 5rem;
+    padding: 1.5rem;
   }
 
   .container-sm {
-    padding: 5rem;
+    padding: 2rem;
   }
 }
 
@@ -265,7 +265,7 @@ header {
 
 @media (max-width: 1290px) {
   .botao-type-1 {
-    padding: 15px 35px;
+    padding: 20px 35px;
     font-size: 1.5rem;
   }
 
@@ -309,7 +309,7 @@ header {
   }
 
   .botao-type-1 {
-    padding: 10px 25px;
+    padding: 15px 25px;
     font-size: 1rem;
   }
 
@@ -325,8 +325,8 @@ header {
 
 @media (max-width: 470px) {
   .botao-type-1 {
-    padding: 10px 25px;
-    font-size: 0.6rem;
+    padding: 18px 36px;
+    font-size: 0.8rem;
   }
 }
 
