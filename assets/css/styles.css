@@ -492,8 +492,8 @@ header {
   }
 
   .botao-type-2 {
-    padding: 5px 12.5px;
-    font-size: 0.6rem;
+    padding: 7.5px 30px;
+    font-size: 0.8rem;
     justify-self: flex-end;
     cursor: pointer;
     text-transform: uppercase;
@@ -897,4 +897,36 @@ input:checked ~ .accordion-content {
   font-weight: bold;
   text-align: center;
   margin-top: 50px;
+}
+
+.why.bg-primary-color-c1 {
+  position: relative;
+}
+
+@media (max-width: 480px) {
+  .arrow-effect {
+    width: 25px;
+    height: 25px;
+    background-image: url("../img/arrow-down-effect.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 50%;
+    margin-top: -30px;
+    transform: translateX(-50%);
+    animation-name: arrowDown;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+
+  @keyframes arrowDown {
+    0% {
+      top: 0px;
+    }
+    100% {
+      top: 10px;
+    }
+  }
 }
