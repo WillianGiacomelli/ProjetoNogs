@@ -37,23 +37,26 @@
         Contato
       </h2>
       <div class="contact-content">
-        <div class="contact-content-img">
-          <img src="assets/img/contact.svg" alt="">
+        <div class="contact-content-img" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+          <img src="assets/img/contact.svg" data-aos-once="true" alt="">
         </div>
-        <div class="contact-form">
-          <form action="">
+        <div class="contact-form" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-once="false">
+          <form action="https://formsubmit.co/finogs2001@gmail.com" method="POST" id="sendForm">
+            <input type="hidden" name="_next" value="./thanks.html">
+            <input type="hidden" name="_captcha" value="false">
             <div class="form-group">
-              <input type="text" id="name" name="name" placeholder="Nome" required>
-              <input type="email" id="name" name="email" placeholder="Seu e-mail" required>
-              <input type="text" id="phone" name="phone" placeholder="Seu Whatsapp" required>
-              <select id="ocupation">
-                <option value="volvo" disabled selected>Selecione a sua profissão</option>
-                <option value="saab">Tecnologia</option>
-                <option value="opel">Direito</option>
-                <option value="audi">Artes</option>
+              <input type="text" id="name" name="name" placeholder="Nome" required onClick="event.preventDefault()">
+              <input type="email" id="email" name="email" placeholder="Seu e-mail" required onClick="event.preventDefault()">
+              <input type="text" id="phone" name="phone" placeholder="Seu Whatsapp" required onClick="event.preventDefault()">
+              <select id="ocupation" name="ocupation">
+                <option value="select" disabled selected>Selecione o seu interesse</option>
+                <option value="gamer">PC Gamer</option>
+                <option value="enterprise">Empresarial</option>
+                <option value="support">Manutenção</option>
+                <option value="homeoffice">Home Office</option>
               </select>
               <div class="contact-btn">
-                <a href="" class="button-type-4">Enviar</a>
+                <button type="submit" class="button-type-4">Enviar</button>
               </div>
             </div>
         </div>

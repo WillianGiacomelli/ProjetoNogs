@@ -15,7 +15,9 @@
   <header>
     <div class="container">
       <div class="logo">
-        NOGS
+        <a href="/index.html">
+          NOGS
+        </a>
       </div>
 
       <nav>
@@ -187,11 +189,12 @@
         </div>
         <div class="contact-form" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-once="false">
           <form action="https://formsubmit.co/finogs2001@gmail.com" method="POST" id="sendForm">
-            <input type="hidden" name="_next" value="https>//google.com">
+            <input type="hidden" name="_next" value="./thanks.html">
+            <input type="hidden" name="_captcha" value="false">
             <div class="form-group">
-              <input type="text" id="name" name="name" placeholder="Nome" required>
-              <input type="email" id="email" name="email" placeholder="Seu e-mail" required>
-              <input type="text" id="phone" name="phone" placeholder="Seu Whatsapp" required>
+              <input type="text" id="name" name="name" placeholder="Nome" required onClick="event.preventDefault()">
+              <input type="email" id="email" name="email" placeholder="Seu e-mail" required onClick="event.preventDefault()">
+              <input type="text" id="phone" name="phone" placeholder="Seu Whatsapp" required onClick="event.preventDefault()">
               <select id="ocupation" name="ocupation">
                 <option value="select" disabled selected>Selecione o seu interesse</option>
                 <option value="gamer">PC Gamer</option>
@@ -200,7 +203,7 @@
                 <option value="homeoffice">Home Office</option>
               </select>
               <div class="contact-btn">
-                <a href="" class="button-type-4" onClick="document.getElementById('sendForm').submit();">Enviar</a>
+                <button type="submit" class="button-type-4">Enviar</button>
               </div>
             </div>
         </div>
